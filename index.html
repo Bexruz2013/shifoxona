@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="uz" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sog'lom Hayot - Zamonaviy Shifoxona</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Ikonkalari -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- 1. NAVBAR -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-teal-600 flex items-center justify-center text-white text-xl shadow-md shadow-teal-200">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <span class="text-2xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">Sog'lom Hayot</span>
+                </div>
+
+                <!-- Desktop Menyu -->
+                <nav class="hidden md:flex items-center gap-8 font-medium text-slate-600">
+                    <a href="#home" class="hover:text-teal-600 transition">Bosh sahifa</a>
+                    <a href="#services" class="hover:text-teal-600 transition">Xizmatlar</a>
+                    <a href="#doctors" class="hover:text-teal-600 transition">Shifokorlar</a>
+                    <a href="#appointment" class="hover:text-teal-600 transition">Qabulga yozilish</a>
+                </nav>
+
+                <!-- Desktop Tugma -->
+                <div class="hidden md:block">
+                    <a href="#appointment" class="px-5 py-2.5 rounded-full bg-teal-600 hover:bg-teal-700 text-white font-medium shadow-lg shadow-teal-600/30 transition duration-300">
+                        Qabulga yozilish
+                    </a>
+                </div>
+
+                <!-- Mobil Menyu Tugmasi -->
+                <button id="mobile-menu-btn" class="md:hidden text-slate-600 hover:text-teal-600 focus:outline-none p-2">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobil Menyu Kontenti -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="block py-2 text-slate-600 hover:text-teal-600 font-medium border-b border-slate-50">Bosh sahifa</a>
+            <a href="#services" class="block py-2 text-slate-600 hover:text-teal-600 font-medium border-b border-slate-50">Xizmatlar</a>
+            <a href="#doctors" class="block py-2 text-slate-600 hover:text-teal-600 font-medium border-b border-slate-50">Shifokorlar</a>
+            <a href="#appointment" class="block py-2 text-slate-600 hover:text-teal-600 font-medium">Qabulga yozilish</a>
+            <a href="#appointment" class="block w-full text-center mt-4 px-5 py-2.5 rounded-xl bg-teal-600 text-white font-medium shadow-md">
+                Qabulga yozilish
+            </a>
+        </div>
+    </header>
+
+    <!-- 2. HERO BANNER -->
+    <section id="home" class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden bg-gradient-to-br from-teal-50/50 via-white to-cyan-50/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Matn qismi -->
+                <div class="space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal-100/60 text-teal-800 text-sm font-semibold">
+                        <i class="fa-solid fa-shield-halved text-teal-600"></i>
+                        <span>24/7 Professional Tibbiy Xizmat</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
+                        Salomatligingiz — <br class="hidden sm:inline"><span class="bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">Bizning O'liy Maqsadimiz</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 max-w-xl mx-auto lg:mx-0">
+                        Zamonaviy texnologiyalar va tajribali shifokorlar jamoasi yordamida o'zingiz hamda yaqinlaringiz salomatligini ishonchli qo'llarga topshiring.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                        <a href="#appointment" class="px-8 py-4 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold shadow-lg shadow-teal-600/30 transition duration-300 text-center">
+                            Qabulga Yozilish <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#doctors" class="px-8 py-4 rounded-xl bg-white hover:bg-slate-50 text-slate-700 font-semibold border border-slate-200 shadow-sm transition duration-300 text-center">
+                            Shifokorlarimiz
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Vizual elementlar -->
+                <div class="relative flex justify-center">
+                    <div class="absolute -top-4 -left-4 w-72 h-72 bg-teal-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+                    <div class="absolute -bottom-4 -right-4 w-72 h-72 bg-cyan-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+                    
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white max-w-md w-full">
+                        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800" alt="Zamonaviy Klinik Tibbiyot" class="w-full h-[420px] object-cover">
+                        
+                        <!-- Mini Statistik Kartochka -->
+                        <div class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-lg border border-slate-100 flex justify-between items-center">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center text-teal-600 font-bold text-lg">
+                                    15+
+                                </div>
+                                <div>
+                                    <p class="text-xs text-slate-500 font-medium">Yillik Tajriba</p>
+                                    <p class="text-sm font-bold text-slate-800">Oliy Toifali Mutaxassislar</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. XIZMATLAR -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Xizmat turlarimiz</h2>
+                <p class="mt-4 text-slate-600">Biz sizga eng zamonaviy uskunalarda barcha turdagi yuqori aniqlikdagi tibbiy xizmatlarni taklif etamiz.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Kartochka 1 -->
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-teal-200 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-teal-100 text-teal-600 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Kardiologiya</h3>
+                    <p class="text-slate-600 leading-relaxed">Yurak va qon-tomir tizimi kasalliklarini davolash hamda chuqurlashtirilgan diagnostika.</p>
+                </div>
+
+                <!-- Kartochka 2 -->
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-teal-200 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-teal-100 text-teal-600 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Nevrologiya</h3>
+                    <p class="text-slate-600 leading-relaxed">Asab tizimi faoliyatini va miya tomirlarini zamonaviy MRT/EEG usullarida tekshirish.</p>
+                </div>
+
+                <!-- Kartochka 3 -->
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-teal-200 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-teal-100 text-teal-600 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-baby"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Pediatriya</h3>
+                    <p class="text-slate-600 leading-relaxed">Farzandlaringiz uchun har tomonlama g'amxo'rlik va profilaktik emlash xizmatlari.</p>
+                </div>
+
+                <!-- Kartochka 4 -->
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-teal-200 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-teal-100 text-teal-600 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-bone"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Ortopediya</h3>
+                    <p class="text-slate-600 leading-relaxed">Bo'g'im va suyak tizimi kasalliklarini kompleks davolash va reabilitatsiya.</p>
+                </div>
+
+                <!-- Kartochka 5 -->
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-teal-200 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-teal-100 text-teal-600 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Laboratoriya</h3>
+                    <p class="text-slate-600 leading-relaxed">Barcha turdagi tahlillarni tezkor hamda 100% aniqlik bilan amalga oshirish.</p>
+                </div>
+
+                <!-- Kartochka 6 -->
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-teal-200 hover:shadow-xl hover:-translate-y-1 transition duration-300">
+                    <div class="w-14 h-14 rounded-xl bg-teal-100 text-teal-600 flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-800 mb-3">Oftalmologiya</h3>
+                    <p class="text-slate-600 leading-relaxed">Ko'z ko'rish qobiliyatini tekshirish va kompyuterlashtirilgan korreksiya qilish.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SHIFOKORLAR RO'YXATI (Dinamik Filtr & Qidiruv) -->
+    <section id="doctors" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl">Bizning Shifokorlar</h2>
+                <p class="mt-4 text-slate-600">O'z sohasining yetakchi va tajribali mutaxassislari ro'yxati</p>
+            </div>
+
+            <!-- Filtr va Qidiruv Boshqaruvi -->
+            <div class="flex flex-col md:flex-row gap-4 justify-between items-center mb-10">
+                <!-- Ixtisoslik Tugmalari -->
+                <div class="flex flex-wrap gap-2 justify-center" id="filter-buttons">
+                    <button data-filter="all" class="filter-btn px-5 py-2 rounded-xl bg-teal-600 text-white font-medium transition shadow-sm">Barchasi</button>
+                    <button data-filter="Kardiolog" class="filter-btn px-5 py-2 rounded-xl bg-white text-slate-600 hover:bg-slate-100 font-medium transition border border-slate-200">Kardiolog</button>
+                    <button data-filter="Nevrolog" class="filter-btn px-5 py-2 rounded-xl bg-white text-slate-600 hover:bg-slate-100 font-medium transition border border-slate-200">Nevrolog</button>
+                    <button data-filter="Pediatr" class="filter-btn px-5 py-2 rounded-xl bg-white text-slate-600 hover:bg-slate-100 font-medium transition border border-slate-200">Pediatr</button>
+                    <button data-filter="Ortoped" class="filter-btn px-5 py-2 rounded-xl bg-white text-slate-600 hover:bg-slate-100 font-medium transition border border-slate-200">Ortoped</button>
+                </div>
+
+                <!-- Qidiruv Maydoni -->
+                <div class="relative w-full md:w-72">
+                    <input type="text" id="search-input" placeholder="Shifokor ismini qidirish..." class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-teal-500 bg-white text-sm">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-3.5 text-slate-400 text-sm"></i>
+                </div>
+            </div>
+
+            <!-- Dinamik Kartochkalar Konteyneri -->
+            <div id="doctors-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- JS orqali to'ldiriladi -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. ONLAYN QABULGA YOZILISH FORMASI -->
+    <section id="appointment" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-teal-600 to-cyan-700 rounded-3xl p-8 sm:p-12 shadow-2xl text-white">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold sm:text-4xl">Shifokor Qabuliga Yozilish</h2>
+                    <p class="mt-2 text-teal-100">Ma'lumotlarni to'ldiring, biz tez orada siz bilan bog'lanamiz</p>
+                </div>
+
+                <form id="appointment-form" class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Ism Familiya -->
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Ism va Familiya *</label>
+                            <input type="text" id="fullname" class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-teal-200 focus:outline-none focus:ring-2 focus:ring-white/50" placeholder="Ali Valiyev">
+                            <span class="text-xs text-red-300 hidden mt-1" id="fullname-error">Iltimos, ismingizni kiriting</span>
+                        </div>
+
+                        <!-- Telefon -->
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Telefon raqam *</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-teal-200 focus:outline-none focus:ring-2 focus:ring-white/50" placeholder="+998 90 123 45 67">
+                            <span class="text-xs text-red-300 hidden mt-1" id="phone-error">Telefon raqam noto'g'ri</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Shifokor Tanlash -->
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Shifokor / Yo'nalish *</label>
+                            <select id="doctor-select" class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-white/50 [&>option]:text-slate-800">
+                                <option value="">Shifokorni tanlang...</option>
+                                <option value="Dr. Alisher Karimov (Kardiolog)">Dr. Alisher Karimov (Kardiolog)</option>
+                                <option value="Dr. Malika Umarova (Nevrolog)">Dr. Malika Umarova (Nevrolog)</option>
+                                <option value="Dr. Jasur Qosimov (Pediatr)">Dr. Jasur Qosimov (Pediatr)</option>
+                                <option value="Dr. Elena Pak (Ortoped)">Dr. Elena Pak (Ortoped)</option>
+                            </select>
+                            <span class="text-xs text-red-300 hidden mt-1" id="doctor-error">Shifokorni tanlang</span>
+                        </div>
+
+                        <!-- Sana -->
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Qabul sanasi *</label>
+                            <input type="date" id="date" class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-white/50">
+                            <span class="text-xs text-red-300 hidden mt-1" id="date-error">Sanamizni tanlang</span>
+                        </div>
+                    </div>
+
+                    <!-- Qo'shimcha Izoh -->
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Shikoyat yoki qo'shimcha izoh</label>
+                        <textarea id="message" rows="3" class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-teal-200 focus:outline-none focus:ring-2 focus:ring-white/50" placeholder="Qisqacha belgilarni yozing..."></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 bg-white text-teal-800 font-bold rounded-xl hover:bg-teal-50 transition duration-300 shadow-lg">
+                        Qabulga Yozilishni Tasdiqlash
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-center text-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>&copy; 2026 "Sog'lom Hayot" Klinikasi. Barcha huquqlar himoyalangan.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL OYNA (Tasdiqlash) -->
+    <div id="success-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-white rounded-3xl p-8 max-w-md w-full mx-4 shadow-2xl transform scale-95 transition-transform duration-300 text-center">
+            <div class="w-16 h-16 bg-emerald-100 text-emerald-500 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-slate-800 mb-2">Muvaffaqiyatli Yozildingiz!</h3>
+            <p class="text-slate-600 text-sm mb-6" id="modal-text">
+                Rahmat, so'rovingiz qabul qilindi. Tez orada operatorlarimiz aloqaga chiqishadi.
+            </p>
+            <button id="close-modal-btn" class="w-full py-3 bg-teal-600 hover:bg-teal-700 text-white font-medium rounded-xl transition">
+                Tushunarli
+            </button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // --- 1. MOBIL MENYU MANTOQI ---
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Mobil menyu havolasi bosilganda menyuni yopish
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // --- 2. SHIFOKORLAR MA'LUMOTLARI VA DINAMIK RENDER ---
+        const doctorsData = [
+            {
+                name: "Dr. Alisher Karimov",
+                role: "Kardiolog",
+                exp: "12 yil tajriba",
+                img: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=400"
+            },
+            {
+                name: "Dr. Malika Umarova",
+                role: "Nevrolog",
+                exp: "9 yil tajriba",
+                img: "https://images.unsplash.com/photo-1594824813571-24a69c100d37?auto=format&fit=crop&q=80&w=400"
+            },
+            {
+                name: "Dr. Jasur Qosimov",
+                role: "Pediatr",
+                exp: "15 yil tajriba",
+                img: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=400"
+            },
+            {
+                name: "Dr. Elena Pak",
+                role: "Ortoped",
+                exp: "8 yil tajriba",
+                img: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=400"
+            }
+        ];
+
+        const doctorsGrid = document.getElementById('doctors-grid');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const searchInput = document.getElementById('search-input');
+
+        let currentFilter = 'all';
+        let searchQuery = '';
+
+        function renderDoctors() {
+            doctorsGrid.innerHTML = '';
+
+            const filtered = doctorsData.filter(doc => {
+                const matchesFilter = currentFilter === 'all' || doc.role === currentFilter;
+                const matchesSearch = doc.name.toLowerCase().includes(searchQuery.toLowerCase());
+                return matchesFilter && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                doctorsGrid.innerHTML = `
+                    <div class="col-span-full text-center py-12 text-slate-400">
+                        <i class="fa-solid fa-user-doctor text-4xl mb-3"></i>
+                        <p>Afsuski, shifokor topilmadi.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            filtered.forEach(doc => {
+                const card = document.createElement('div');
+                card.className = "bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 border border-slate-100 flex flex-col";
+                card.innerHTML = `
+                    <img src="${doc.img}" alt="${doc.name}" class="w-full h-56 object-cover object-top">
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="inline-block px-3 py-1 bg-teal-50 text-teal-700 text-xs font-semibold rounded-full mb-2">${doc.role}</span>
+                            <h3 class="text-lg font-bold text-slate-800">${doc.name}</h3>
+                            <p class="text-xs text-slate-500 mt-1"><i class="fa-regular fa-clock mr-1"></i>${doc.exp}</p>
+                        </div>
+                        <a href="#appointment" onclick="preselectDoctor('${doc.name} (${doc.role})')" class="mt-4 block text-center w-full py-2 bg-slate-100 hover:bg-teal-600 hover:text-white text-slate-700 text-sm font-medium rounded-xl transition">
+                            Qabulga yozilish
+                        </a>
+                    </div>
+                `;
+                doctorsGrid.appendChild(card);
+            });
+        }
+
+        // Shifokorni tanlaganda shakldagi dropdownga moslash
+        window.preselectDoctor = function(docVal) {
+            const selectEl = document.getElementById('doctor-select');
+            selectEl.value = docVal;
+        };
+
+        // Filtr tugmalari voqeasi
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-teal-600', 'text-white');
+                    b.classList.add('bg-white', 'text-slate-600');
+                });
+                btn.classList.remove('bg-white', 'text-slate-600');
+                btn.classList.add('bg-teal-600', 'text-white');
+
+                currentFilter = btn.getAttribute('data-filter');
+                renderDoctors();
+            });
+        });
+
+        // Qidiruv voqeasi
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value;
+            renderDoctors();
+        });
+
+        // Boshlang'ich render
+        renderDoctors();
+
+        // --- 3. FORMA VA VALIDATSIYA MANTOQI ---
+        const appointmentForm = document.getElementById('appointment-form');
+        const modal = document.getElementById('success-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const modalText = document.getElementById('modal-text');
+
+        appointmentForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            let isValid = true;
+
+            // Maydonlar
+            const fullname = document.getElementById('fullname');
+            const phone = document.getElementById('phone');
+            const doctor = document.getElementById('doctor-select');
+            const date = document.getElementById('date');
+
+            // Xato matnlari
+            const fullnameErr = document.getElementById('fullname-error');
+            const phoneErr = document.getElementById('phone-error');
+            const doctorErr = document.getElementById('doctor-error');
+            const dateErr = document.getElementById('date-error');
+
+            // Reset errors
+            [fullnameErr, phoneErr, doctorErr, dateErr].forEach(el => el.classList.add('hidden'));
+
+            // Validatsiya
+            if (fullname.value.trim().length < 3) {
+                fullnameErr.classList.remove('hidden');
+                isValid = false;
+            }
+
+            if (phone.value.trim().length < 7) {
+                phoneErr.classList.remove('hidden');
+                isValid = false;
+            }
+
+            if (!doctor.value) {
+                doctorErr.classList.remove('hidden');
+                isValid = false;
+            }
+
+            if (!date.value) {
+                dateErr.classList.remove('hidden');
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Modal ma'lumotlarini tayyorlash
+                modalText.innerHTML = `
+                    Muhtaram <strong class="text-teal-700">${fullname.value}</strong>, sizning so'rovingiz <strong class="text-teal-700">${doctor.value}</strong> qabuliga <strong>${date.value}</strong> sanasi uchun muvaffaqiyatli qabul qilindi.
+                `;
+                
+                // Modani ochish
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    modal.querySelector('div').classList.remove('scale-95');
+                }, 10);
+
+                // Formani tozalash
+                appointmentForm.reset();
+            }
+        });
+
+        // Modalni yopish
+        closeModalBtn.addEventListener('click', () => {
+            modal.classList.add('opacity-0');
+            modal.querySelector('div').classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        });
+    </script>
+</body>
+</html>
